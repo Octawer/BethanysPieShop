@@ -10,13 +10,6 @@
             </h3>
             <p>@Model.ShortDescription</p>
         </div>
-        <div class="addToCart">
-            <p class="button">
-                <a class="btn btn-primary"
-                   asp-controller="ShoppingCart"
-                   asp-action="AddToShoppingCart"
-                   asp-route-pieId="@Model.PieId">Add to cart</a>
-            </p>
-        </div>
+        <partial name="_AddToCart" model="@Model" />
     </div>
 </div>
