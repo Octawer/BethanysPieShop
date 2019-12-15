@@ -32,6 +32,7 @@ namespace BethanysPieShop
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped(s => ShoppingCart.GetShoppingCart(s));
+
             services.AddHttpContextAccessor();
             services.AddSession();
 
@@ -51,6 +52,8 @@ namespace BethanysPieShop
             app.UseSession();
 
             app.UseRouting();
+            app.UseAuthentication();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
