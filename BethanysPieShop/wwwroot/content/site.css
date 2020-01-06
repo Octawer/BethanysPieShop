@@ -96,3 +96,12 @@ footer {
     background-color: #fcaeae !important;
     border-color: #fba1a1 !important;
 }
+
+.featured-pie {
+    color: red;
+}
+
+
+.normal-pie {
+    color: green;
+}
